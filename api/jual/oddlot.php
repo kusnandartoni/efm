@@ -33,8 +33,8 @@
 
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         extract($row);
-       // if($jumlah%100 < 1)continue;
-        if($status!='sent')continue;
+        // if($jumlah%100 < 1)continue;
+        if($status!='Process' && $status!='sent')continue;
         $rowData = '';
         $rowData .= '"'.$clientId.'"'."\t";
         $rowData .= '"S"'."\t";

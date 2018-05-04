@@ -1104,11 +1104,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var MarketProvider = (function () {
+    // private apiUrl = 'https://eformbbca.bcasekuritas.co.id/api';
     // private apiUrl = 'https://kangpanci.com/api';
     function MarketProvider(http) {
         this.http = http;
-        // private apiUrl = 'http://localhost/api';
-        this.apiUrl = 'https://eformbbca.bcasekuritas.co.id/api';
+        this.apiUrl = 'http://localhost/api';
     }
     MarketProvider.prototype._getHeaders = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
@@ -1201,15 +1201,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LoginProvider = (function () {
+    // private ipurl = 'https://freegeoip.net/json/';
+    // private apiUrl = 'https://eformbbca.bcasekuritas.co.id/api';
     //private apiUrl = 'https://kangpanci.com/api';
     function LoginProvider(tool, http, mdlCtrl) {
         this.tool = tool;
         this.http = http;
         this.mdlCtrl = mdlCtrl;
-        // private apiUrl = 'http://localhost/api';
-        // private ipurl = 'http://freegeoip.net/json/';
-        this.ipurl = 'https://freegeoip.net/json/';
-        this.apiUrl = 'https://eformbbca.bcasekuritas.co.id/api';
+        this.apiUrl = 'http://localhost/api';
+        this.ipurl = 'http://freegeoip.net/json/';
     }
     LoginProvider.prototype._getHeaders = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
@@ -1299,10 +1299,11 @@ var LoginProvider = (function () {
     };
     LoginProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__tools_tools__["a" /* ToolsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__tools_tools__["a" /* ToolsProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* ModalController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__tools_tools__["a" /* ToolsProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* ModalController */]])
     ], LoginProvider);
     return LoginProvider;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=login.js.map
