@@ -1,4 +1,4 @@
-webpackJsonp([8],{
+webpackJsonp([9],{
 
 /***/ 115:
 /***/ (function(module, exports) {
@@ -23,31 +23,35 @@ webpackEmptyAsyncContext.id = 115;
 var map = {
 	"../pages/admin/admin.module": [
 		288,
-		6
+		7
 	],
 	"../pages/create-user/create-user.module": [
 		289,
-		5
+		6
 	],
 	"../pages/history/history.module": [
 		290,
-		4
+		5
 	],
 	"../pages/home/home.module": [
 		291,
-		3
+		4
 	],
 	"../pages/keterangan/keterangan.module": [
 		292,
-		2
+		3
 	],
 	"../pages/login/login.module": [
 		293,
+		2
+	],
+	"../pages/monitor-histori/monitor-histori.module": [
+		294,
 		1
 	],
 	"../pages/register/register.module": [
-		294,
-		7
+		296,
+		8
 	],
 	"../pages/syarat/syarat.module": [
 		295,
@@ -707,8 +711,9 @@ var AppModule = (function () {
                         { loadChildren: '../pages/home/home.module#LoginPageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/keterangan/keterangan.module#KeteranganPageModule', name: 'KeteranganPage', segment: 'keterangan', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/syarat/syarat.module#SyaratPageModule', name: 'SyaratPage', segment: 'syarat', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/monitor-histori/monitor-histori.module#MonitorHistoriPageModule', name: 'MonitorHistoriPage', segment: 'monitor-histori', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/syarat/syarat.module#SyaratPageModule', name: 'SyaratPage', segment: 'syarat', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -797,12 +802,13 @@ var MyApp = (function () {
                 if (user.clientId === 'Admin') {
                     this.pages = [
                         { title: 'Penjualan BBCA', component: 'AdminPage', icon: 'cart' },
+                        { title: 'Monitor Histori', component: 'MonitorHistoriPage', icon: 'list-box' },
                         { title: 'Buat User', component: 'CreateUserPage', icon: 'people' }
                     ];
                 }
                 else {
                     this.pages = [
-                        { title: 'Penjualan BBCA', component: 'AdminPage', icon: 'cart' }
+                        { title: 'Penjualan BBCA', component: 'AdminPage', icon: 'cart' },
                     ];
                 }
             }
@@ -1104,7 +1110,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var MarketProvider = (function () {
-    // private apiUrl = 'https://kangpanci.com/api';
     function MarketProvider(http) {
         this.http = http;
         // private apiUrl = 'http://localhost/api';
@@ -1162,10 +1167,9 @@ var MarketProvider = (function () {
     };
     MarketProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]])
     ], MarketProvider);
     return MarketProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=market.js.map
@@ -1202,7 +1206,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LoginProvider = (function () {
-    //private apiUrl = 'https://kangpanci.com/api';
     function LoginProvider(tool, http, mdlCtrl) {
         this.tool = tool;
         this.http = http;
@@ -1300,10 +1303,11 @@ var LoginProvider = (function () {
     };
     LoginProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__tools_tools__["a" /* ToolsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__tools_tools__["a" /* ToolsProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* ModalController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__tools_tools__["a" /* ToolsProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* ModalController */]])
     ], LoginProvider);
     return LoginProvider;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=login.js.map
